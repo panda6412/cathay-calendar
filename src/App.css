@@ -2,37 +2,63 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calendar {
+  width: 350px;
+  height: 240px;
+  font-size: 16px;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calendar > .header {
+  height: 44px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+  margin-bottom: 16px;
+}
+
+.calendar > .header > .button {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  cursor: pointer;
+  user-select: none;
 }
 
-.App-link {
-  color: #61dafb;
+.calendar > .header > .button:hover {
+  background: #e6e6e6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calendar .date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 50px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.calendar .date:hover {
+  background: #e6e6e6;
+}
+
+.calendar .isToday {
+  background: #ffff76;
+}
+
+.calendar .isSelected {
+  background: #006edc !important;
+  color: white !important;
+}
+
+
+.calendar .nonCurrentMonth {
+  flex: 1;
+  min-width: 50px;
+  height: 36px;
+  color: #757575 !important;
+  cursor: not-allowed;
 }
